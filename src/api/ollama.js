@@ -8,13 +8,13 @@
 //   ROUTER      → gemini-1.5-flash (lightweight decision-making)
 // ─────────────────────────────────────────────────────────────
 
-const GEMINI_API_KEY = process.env.REACT_APP_GEMINI_KEY;
-const GEMINI_BASE = "https://generativelanguage.googleapis.com/v1beta/openai";
+const GEMINI_API_KEY = "";
+const GEMINI_BASE = "https://api.groq.com/openai/v1";
 
 export const MODELS = {
-  rival: "gemini-1.5-pro",
-  facilitator: "gemini-1.5-flash",
-  router: "gemini-1.5-flash",
+  rival: "llama-3.3-70b-versatile",
+  facilitator: "llama-3.1-8b-instant",
+  router: "llama-3.1-8b-instant",
 };
 
 export async function callOllama(model, systemPrompt, messages) {
